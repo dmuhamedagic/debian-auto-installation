@@ -1,0 +1,29 @@
+apt-get -q -y --no-remove install locales
+apt-get -q -y --no-remove install busybox
+apt-get -q -y --no-remove install zstd
+apt-get -q -y --no-remove install initramfs-tools
+apt-get -q -y --no-remove -o APT::Install-Recommends=true install linux-image-amd64
+apt-get -q -y --no-remove install pciutils
+apt-get -q -y --no-remove install usbutils
+apt-get -q -y --no-remove install wireless-tools
+apt-get -q -y --no-remove install wpasupplicant
+apt-get -q -y --no-remove install lvm2
+apt-get -q -y --no-remove install cryptsetup-initramfs
+apt-get -q -y --no-remove install keyboard-configuration
+apt-get -q -y --no-remove install console-setup
+apt-get -q --no-install-recommends -y -o DPkg::options=--force-confnew upgrade --with-new-pkgs
+apt-get -q -y --no-remove install laptop-detect
+apt-get -q -y --no-remove install discover
+apt-get -q -y --no-remove -o APT::Install-Recommends=false install installation-report
+apt-get -q -y --no-remove -o APT::Install-Recommends=false install popularity-contest
+apt-get -q -y -o APT::Install-Recommends=true -o APT::Get::AutomaticRemove=true -o Acquire::Retries=3 install task-ssh-server task-laptop xz-utils libpam-systemd apt-listchanges man-db traceroute manpages liblockfile-bin openssh-client inetutils-telnet python3-reportbug krb5-locales lsof groff-base debian-faq reportbug file wamerican ncurses-term bind9-host netcat-traditional systemd-timesyncd mime-support ca-certificates wget media-types doc-debian bind9-dnsutils bzip2 ucf libnss-systemd dbus perl gettext-base bash-completion task-english task-xfce-desktop task-web-server task-desktop
+apt-get -q -y --no-remove install grub-common
+apt-get -q -y --no-remove install grub-pc
+apt-get -q -y --no-remove -o APT::Install-Recommends=true install intel-microcode
+apt install rsync
+apt install transmission transmission-qt
+apt install workrave-xfce4
+apt purge nano
+apt purge gdm3
+apt install apt-file vlc mpv debconf-utils apt-file vlc mpv debconf-utils \
+	duplicity dump mutt xclip fortunes pm-utils vim nss-passwords
